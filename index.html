@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Sample Page</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f0ff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #6a0dad;
+        }
+
+        /* List Styling */
+        ol {
+            padding-left: 20px;
+        }
+
+        /* Image Styling */
+        img {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+        th {
+            background-color: #b47ee5;
+            color: white;
+        }
+
+        /* Form Styling */
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(106, 13, 173, 0.2);
+            max-width: 600px;
+        }
+
+        label {
+            font-weight: 500;
+            display: block;
+            margin-top: 15px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        input:focus, select:focus {
+            border-color: #a158e0;
+            outline: none;
+            box-shadow: 0 0 8px rgba(161, 88, 224, 0.3);
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #6a0dad;
+            color: white;
+            font-weight: bold;
+            border: none;
+            padding: 12px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #a158e0;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 600px) {
+            table, form {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to My Page</h1>
+
+    <!-- Ordered List -->
+    <h2>My Top 5 Favorite Things</h2>
+    <ol type="I">
+        <li>Technology</li>
+        <li>Books</li>
+        <li>Movies</li>
+        <li>Traveling</li>
+        <li>Music</li>
+    </ol>
+
+    <!-- Image from Pexels -->
+    <h2>Nature Snapshot</h2>
+    <img src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg" alt="Nature View">
+
+    <!-- Table of Contacts -->
+    <h2>Contact List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Mobile</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Caleb Given</td>
+                <td>123 Nairobi Ave</td>
+                <td>+1234567890</td>
+                <td>caleb@example.com</td>
+            </tr>
+            <tr>
+                <td>Jane Boulevard</td>
+                <td>456 Moi Rd</td>
+                <td>+2345678901</td>
+                <td>jane@example.com</td>
+            </tr>
+            <tr>
+                <td>Mike Chance</td>
+                <td>789 Harry Ave</td>
+                <td>+3456789012</td>
+                <td>mike@example.com</td>
+            </tr>
+            <tr>
+                <td>Susan Aura</td>
+                <td>321 Haile Ln</td>
+                <td>+4567890123</td>
+                <td>susan@example.com</td>
+            </tr>
+            <tr>
+                <td>Tom Loss</td>
+                <td>654 Jeff St</td>
+                <td>+5678901234</td>
+                <td>tom@example.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Registration Form -->
+    <h2>Register Here</h2>
+    <form action="#" method="post">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Choose a strong password" required minlength="6">
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="country">Select Country:</label>
+        <select id="country" name="country" required>
+            <option value="">--Select--</option>
+            <option value="kenya">Kenya</option>
+            <option value="nigeria">Nigeria</option>
+            <option value="canada">Canada</option>
+            <option value="uk">United Kingdom</option>
+        </select>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+
+        <label>Hobbies:</label>
+        <input type="checkbox" id="reading" name="hobbies" value="reading">
+        <label for="reading">Reading</label>
+
+        <input type="checkbox" id="sports" name="hobbies" value="sports">
+        <label for="sports">Sports</label>
+
+        <input type="checkbox" id="coding" name="hobbies" value="coding">
+        <label for="coding">Coding</label>
+
+        <input type="submit" value="Register">
+    </form>
+
+</body>
+</html>
